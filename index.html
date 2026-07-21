@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Registro de Beneficiarios</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<!-- AQUI COMIENZA EL CODIGO, ESTA EL PARTE FRONTAL QUE QUEDA ESTATICA  -->
+<body>
+
+<h1>
+  <i class="fa-solid fa-file-signature"></i>
+  Registro de Beneficiarios
+</h1>
+    <link rel="stylesheet" href="styles.css">
+
+  <!-- Sección Global -->
+ <div class="card info-global">
+    
+    <div>
+      <label for="fechaJornada"> <i class="fa-solid fa-calendar-days"></i> Fecha de Jornada:</label>
+      <input type="date" id="fechaJornada" name="fechaJornada" required />
+    </div>
+
+    <div>
+      <label for="sede"><i class="fa-solid fa-building"></i> Sede:</label>
+      <input type="text" id="sede" name="sede" required />
+    </div>
+
+   <div>
+       <label for="municipioSede"><i class="fa-solid fa-location-dot"></i>  Municipio de Sede:</label>
+      <select id="municipioSede" name="municipioSede" required>
+        <option value="" disabled selected>Selecciona</option>
+        <option value="Abasolo">ABASOLO</option>
+        <option value="Agualeguas">AGUALEGUAS</option>
+        <option value="Los Aldamas">LOS ALDAMA</option>
+        <option value="Allende">ALLENDE</option>
+        <option value="Anáhuac">ANÁHUAC</option>
+        <option value="Apodaca">APODACA</option>
+        <option value="Aramberri">ARAMBERRI</option>
+        <option value="Bustamante">BUSTAMANTE</option>
+        <option value="Cadereyta Jiménez">CADEREYTA JIMÉNEZ</option>
+        <option value="El Carmen">EL CARMEN</option>
+        <option value="Cerralvo">CERRALVO</option>
+        <option value="Ciénega de Flores">CIÉNEGA DE FLORES</option>
+        <option value="China">CHINA</option>
+        <option value="Doctor Arroyo">DOCTOR ARROYO</option>
+        <option value="Doctor Coss">DOCTOR COSS</option>
+        <option value="Doctor González">DOCTOR GONZÁLEZ</option>
+        <option value="Galeana">GALEANA</option>
+        <option value="García">GARCÍA</option>
+        <option value="San Pedro Garza García">SAN PEDRO GARZA GARCÍA</option>
+        <option value="General Bravo">GENERAL BRAVO</option>
+        <option value="General Escobedo">GENERAL ESCOBEDO</option>
+        <option value="General Terán">GENERAL TERÁN</option>
+        <option value="General Treviño">GENERAL TREVIÑO</option>
+        <option value="General Zaragoza">GENERAL ZARAGOZA</option>
+        <option value="General Zuazua">GENERAL ZUAZUA</option>
+        <option value="Guadalupe">GUADALUPE</option>
+        <option value="Los Herreras">LOS HERRERA</option>
+        <option value="Higueras">HIGUERAS</option>
+        <option value="Hualahuises">HUALAHUISES</option>
+        <option value="Iturbide">ITURBIDE</option>
+        <option value="Juárez">JUÁREZ</option>
+        <option value="Lampazos de Naranjo">LAMPAZOS DE NARANJO</option>
+        <option value="Linares">LINARES</option>
+        <option value="Marín">MARÍN</option>
+        <option value="Melchor Ocampo">MELCHOR OCAMPO</option>
+        <option value="Mier y Noriega">MIER Y NORIEGA</option>
+        <option value="Mina">MINA</option>
+        <option value="Montemorelos">MONTEMORELOS</option>
+        <option value="Monterrey">MONTERREY</option>
+        <option value="Parás">PARÁS</option>
+        <option value="Pesquería">PESQUERÍA</option>
+        <option value="Los Ramones">LOS RAMONES</option>
+        <option value="Rayones">RAYONES</option>
+        <option value="Sabinas Hidalgo">SABINAS HIDALGO</option>
+        <option value="Salinas Victoria">SALINAS VICTORIA</option>
+        <option value="San Nicolás de los Garza">SAN NICOLÁS DE LOS GARZA</option>
+        <option value="Hidalgo">HIDALGO</option>
+        <option value="Santa Catarina">SANTA CATARINA</option>
+        <option value="Santiago">SANTIAGO</option>
+        <option value="Vallecillo">VALLECILLO</option>
+        <option value="Villaldama">VILLALDAMA</option>
+      </select>
+    </div>
+
+
+    <div>
+      <label for="tipoServicio"><i class="fa-solid fa-hand-holding-heart"></i>   Tipo de Servicio:</label>
+      <select id="tipoServicio" name="tipoServicio" required>
+        <option value="" disabled selected>Selecciona</option>
+        <option value="INFORMACIÓN DE PROGRAMAS">INFORMACIÓN DE PROGRAMAS</option>
+        <option value="REZAGO EDUCATIVO">REZAGO EDUCATIVO</option>
+        <option value="INCLUSIÓN LABORAL">INCLUSIÓN LABORAL</option>
+        <option value="CUIDAR TU SALUD">CUIDAR TU SALUD</option>
+        <option value="GESTORÍA">GESTORÍA</option>
+        <option value="INFORMACIÓN PRIMERA INFANCIA">INFORMACIÓN PRIMERA INFANCIA</option>
+        <option value="INFORMACIÓN ESPACIOS DE IGUALDAD E INCLUSIÓN">INFORMACIÓN ESPACIOS DE IGUALDAD E INCLUSIÓN</option>
+        <option value="INFORMACIÓN DE TALLERES">INFORMACIÓN DE TALLERES</option>
+        <option value="INFORMACIÓN CAIPA">INFORMACIÓN CAIPA</option>
+        <option value="INFORMACIÓN CAEVI">INFORMACIÓN CAEVI</option>
+        <option value="PREVENRUTA">PREVENRUTA</option>
+        <option value="CULTURA DE PAZ">CULTURA DE PAZ</option>
+        <option value="JÓVENES POR UN NUEVO NUEVO LEÓN">JÓVENES POR UN NUEVO NUEVO LEÓN</option>
+        <option value="INFORMACIÓN OSC">INFORMACIÓN OSC</option>
+        <option value="INFORMACIÓN PARA INVERSIÓN SOCIAL">INFORMACIÓN PARA INVERSIÓN SOCIAL</option>
+        <!-- (Agrega opciones según necesites) -->
+      </select>
+    </div>
+
+
+    <div>
+      <label for="No. de empleado"><i class="fa-solid fa-id-badge"></i>   No. de empleado:</label>
+      <input id="empleado" type="text" required
+        oninput="this.value = this.value.toUpperCase()">
+    </div>
+
+    <div>
+      <label for="personaCaptura""><i class="fa-solid fa-keyboard"></i>   Persona que captura:</label>
+      <input type="text" id="personaCaptura" name="personaCaptura" required />
+    </div>
+
+
+    <div><!-- espacio para futuro o vacío --></div>
+
+  </div>
+
+<!-- AQUI TERMINA LA PARTE FRONTRAL-->
+
+
+<!-- COMIENZA LA CREACIÓN DE BOTONES -->
+  </div>
+
+
+<div class="botones">
+  <button type="button" id="guardarBtn">
+      <i class="fa-solid fa-floppy-disk"></i>
+      Guardar Registro
+  </button>
+</div>
+
+
+  <div style="margin-bottom: 40px;"></div>
+
+<!-- TERMINA LA CREACIÓN DE BOTONES -->
+
+  <!-- FORMULARIO DE REGISTRO PRINCIPAL -->
+ <form id="registroForm" class="card">
+
+    <!--  
+    <div>
+      <label for="idConsecutivo">ID Consecutivo:</label>
+      <label for="idCaptura"><i class="fa-solid fa-fingerprint"></i>   ID de Captura:</label>
+      <input type="text" id="idConsecutivo" name="idConsecutivo" required />
+    </div>-->
+
+    <div>
+     <label for="apellidoPaterno"><i class="fa-solid fa-user-tag"></i>   Apellido Paterno:</label>
+      <input type="text" id="apellidoPaterno" name="apellidoPaterno" required />
+    </div>
+    <div>
+      <label for="apellidoMaterno"><i class="fa-solid fa-user-tag"></i>   Apellido Materno:</label>
+      <input type="text" id="apellidoMaterno" name="apellidoMaterno" required />
+    </div>
+    <div>
+      <label for="nombre"><i class="fa-solid fa-user"></i>Nombre(s):</label>
+      <input type="text" id="nombre" name="nombre" required />
+    </div>
+  
+<!-- SE LE COLOCALRON LIMITACIONES A LA FECHA PARA QUE NO SE SALGA DE LOS RANGOS -->
+  <div>
+  <label for="fechaNacimiento"> <i class="fa-solid fa-calendar-days"></i> Fecha de Nacimiento:</label>
+  <input
+    type="date"
+    id="fechaNacimiento"
+    name="fechaNacimiento"
+    required
+    min="1900-01-01"
+    max="2026-12-31"
+  />
+  <span id="errorFecha" style="color: red; display: none; font-size: 0.9em;"></span>
+</div>
+
+    <div>
+      <label for="curp"><i class="fa-solid fa-id-card"></i>   CURP:</label>
+      <input type="text" id="curp" name="curp" maxlength="18" placeholder="Ej. ABCD010101HDFRLL09" required />
+    </div>
+
+    <div>
+      <label for="genero"><i class="fa-solid fa-venus-mars"></i>   Género:</label>
+      <select id="genero" name="genero" required>
+        <option value="" disabled selected>Selecciona</option>
+        <option value="Masculino">MASCULINO</option>
+        <option value="Femenino">FEMENINO</option>
+        <option value="Otro">OTRO</option>
+      </select>
+    </div>
+    <div>
+      <label for="lugarNacimiento"><i class="fa-solid fa-earth-americas"></i>   Lugar de Nacimiento:</label>
+      <select id="lugarNacimiento" name="lugarNacimiento" required>
+        <option value="" disabled selected>Selecciona</option>
+        <option value="Aguascalientes">AGUASCALIENTES</option>
+        <option value="Baja California">BAJA CALIFORNIA</option>
+        <option value="Baja California Sur">BAJA CALIFORNIA SUR</option>
+        <option value="Campeche">CAMPECHE</option>
+        <option value="Chiapas">CHIAPAS</option>
+        <option value="Chihuahua">CHIHUAHUA</option>
+        <option value="Ciudad de México">CIUDAD DE MÉXICO</option>
+        <option value="Coahuila">COAHUILA</option>
+        <option value="Colima">COLIMA</option>
+        <option value="Durango">DURANGO</option>
+        <option value="Estado de México">ESTADO DE MÉXICO</option>
+        <option value="Extranjero">EXTRANJERO</option>
+        <option value="Guanajuato">GUANAJUATO</option>
+        <option value="Guerrero">GUERRERO</option>
+        <option value="Hidalgo">HIDALGO</option>
+        <option value="Jalisco">JALISCO</option>
+        <option value="Michoacán">MICHOACÁN</option>
+        <option value="Morelos">MORELOS</option>
+        <option value="Nayarit">NAYARIT</option>
+        <option value="Nuevo León">NUEVO LEÓN</option>
+        <option value="Oaxaca">OAXACA</option>
+        <option value="Puebla">PUEBLA</option>
+        <option value="Querétaro">QUERÉTARO</option>
+        <option value="Quintana Roo">QUINTANA ROO</option>
+        <option value="San Luis Potosí">SAN LUIS POTOSÍ</option>
+        <option value="Sinaloa">SINALOA</option>
+        <option value="Sonora">SONORA</option>
+        <option value="Tabasco">TABASCO</option>
+        <option value="Tamaulipas">TAMAULIPAS</option>
+        <option value="Tlaxcala">TLAXCALA</option>
+        <option value="Veracruz">VERACRUZ</option>
+        <option value="Yucatán">YUCATÁN</option>
+        <option value="Zacatecas">ZACATECAS</option>
+      </select>
+    </div>
+    <div>
+      <label for="calle"><i class="fa-solid fa-road"></i>   Calle:</label>
+      <input type="text" id="calle" name="calle" required />
+    </div>
+    <div>
+      <label for="numero"><i class="fa-solid fa-hashtag"></i>   Número:</label>
+      <input type="text" id="numero" name="numero" required />
+    </div>
+    <div>
+      <label for="colonia"><i class="fa-solid fa-map-location-dot"></i>   Colonia:</label>
+      <input type="text" id="colonia" name="colonia" required />
+    </div>
+
+   <div>
+      <label for="municipio"><i class="fa-solid fa-location-dot"></i>  Municipio:</label>
+      <select id="municipio" name="municipio" required>
+        <option value="" disabled selected>Selecciona</option>
+        <option value="Abasolo">ABASOLO</option>
+        <option value="Agualeguas">AGUALEGUAS</option>
+        <option value="Los Aldamas">LOS ALDAMA</option>
+        <option value="Allende">ALLENDE</option>
+        <option value="Anáhuac">ANÁHUAC</option>
+        <option value="Apodaca">APODACA</option>
+        <option value="Aramberri">ARAMBERRI</option>
+        <option value="Bustamante">BUSTAMANTE</option>
+        <option value="Cadereyta Jiménez">CADEREYTA JIMÉNEZ</option>
+        <option value="El Carmen">EL CARMEN</option>
+        <option value="Cerralvo">CERRALVO</option>
+        <option value="Ciénega de Flores">CIÉNEGA DE FLORES</option>
+        <option value="China">CHINA</option>
+        <option value="Doctor Arroyo">DOCTOR ARROYO</option>
+        <option value="Doctor Coss">DOCTOR COSS</option>
+        <option value="Doctor González">DOCTOR GONZÁLEZ</option>
+        <option value="Galeana">GALEANA</option>
+        <option value="García">GARCÍA</option>
+        <option value="San Pedro Garza García">SAN PEDRO GARZA GARCÍA</option>
+        <option value="General Bravo">GENERAL BRAVO</option>
+        <option value="General Escobedo">GENERAL ESCOBEDO</option>
+        <option value="General Terán">GENERAL TERÁN</option>
+        <option value="General Treviño">GENERAL TREVIÑO</option>
+        <option value="General Zaragoza">GENERAL ZARAGOZA</option>
+        <option value="General Zuazua">GENERAL ZUAZUA</option>
+        <option value="Guadalupe">GUADALUPE</option>
+        <option value="Los Herreras">LOS HERRERA</option>
+        <option value="Higueras">HIGUERAS</option>
+        <option value="Hualahuises">HUALAHUISES</option>
+        <option value="Iturbide">ITURBIDE</option>
+        <option value="Juárez">JUÁREZ</option>
+        <option value="Lampazos de Naranjo">LAMPAZOS DE NARANJO</option>
+        <option value="Linares">LINARES</option>
+        <option value="Marín">MARÍN</option>
+        <option value="Melchor Ocampo">MELCHOR OCAMPO</option>
+        <option value="Mier y Noriega">MIER Y NORIEGA</option>
+        <option value="Mina">MINA</option>
+        <option value="Montemorelos">MONTEMORELOS</option>
+        <option value="Monterrey">MONTERREY</option>
+        <option value="Parás">PARÁS</option>
+        <option value="Pesquería">PESQUERÍA</option>
+        <option value="Los Ramones">LOS RAMONES</option>
+        <option value="Rayones">RAYONES</option>
+        <option value="Sabinas Hidalgo">SABINAS HIDALGO</option>
+        <option value="Salinas Victoria">SALINAS VICTORIA</option>
+        <option value="San Nicolás de los Garza">SAN NICOLÁS DE LOS GARZA</option>
+        <option value="Hidalgo">HIDALGO</option>
+        <option value="Santa Catarina">SANTA CATARINA</option>
+        <option value="Santiago">SANTIAGO</option>
+        <option value="Vallecillo">VALLECILLO</option>
+        <option value="Villaldama">VILLALDAMA</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="codigopostal"><i class="fa-solid fa-map-pin"></i>    Código Postal:</label>
+      <input type="text" id="codigopostal" name="codigopostal" required />
+    </div>
+    <div>
+	<label for="telefonocasa"><i class="fa-solid fa-phone"></i>    Teléfono de Casa:</label>
+      <input type="text" id="telefonocasa" name="telefonocasa" maxlength="10" placeholder="Ej. 8184102521"  />
+    </div>
+
+  
+    <div>
+      <label for="telefonocelular"><i class="fa-solid fa-mobile-screen"></i>    Celular:</label>
+      <input type="text" id="telefonocelular" name="telefonocelular" maxlength="10" placeholder="Ej. 8184102521"/>
+    </div>
+
+    <div>
+      <label for="adultoNino"><i class="fa-solid fa-people-group"></i> Adulto Niño:</label>
+      <select id="adultoNino" name="adultoNino" required>
+        <option value="" disabled selected>Selecciona</option>
+        <option value="Adulto">ADULTO</option>
+        <option value="Niño">NIÑO</option>
+      </select>
+    </div>
+  </form>
+
+  <!-- TERMINA EL FORMULARIO DE REGISTRO PRINCIPAL  -->
+  
+
+<!-- SDK de Firebase SON LOS KIDS DE DESARROLLO DE SOFWARE DE FIREBASE 
+ bibliotecas de código que permiten a los desarrolladores conectar y utilizar los servicios de la plataforma 
+ Firebase en sus aplicaciones móviles y web -->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+<!-- SDK PARA DESCARGAR EL EXCEL  -->
+<script src="https://cdn.sheetjs.com/xlsx-0.20.0/package/dist/xlsx.full.min.js"></script>
+
+<!-- PARA QUE SE VALIDE EN TODOS LOS NAVEGADORES -->
+<script> 
+  const edadInput = document.getElementById('edad');
+  const edadError = document.getElementById('edadError');
+
+  edadInput.addEventListener('input', () => {
+    const valor = parseInt(edadInput.value);
+
+    if (isNaN(valor)) {
+      edadError.style.display = 'none';
+      edadInput.setCustomValidity('');
+      return;
+    }
+
+    if (valor < 0 || valor > 120) {
+      edadError.textContent = '⚠️ Edad fuera de rango (debe estar entre 0 y 120 años).';
+      edadError.style.display = 'inline';
+      edadInput.setCustomValidity('Edad inválida');
+    } else {
+      edadError.style.display = 'none';
+      edadInput.setCustomValidity('');
+    }
+  });
+</script>
+
+<!-- SIRVE PARA VALIDAR LA FECHA DE NACIMIENTO QUE SE ENCUENTRE DENTRO DE LOS RANGLOS PREESTABLECIDOS -->
+<script> 
+  const fechaInput = document.getElementById('fechaNacimiento');
+  const errorFecha = document.getElementById('errorFecha');
+
+  fechaInput.addEventListener('change', () => {
+    const valor = fechaInput.value;
+    if (!valor) {
+      errorFecha.style.display = 'none';
+      fechaInput.setCustomValidity('');
+      return;
+    }
+
+    const fecha = new Date(valor);
+    const minFecha = new Date('1900-01-01');
+    const maxFecha = new Date('2026-12-31');
+
+    if (fecha < minFecha || fecha > maxFecha) {
+      errorFecha.textContent = 'Fecha inválida. Debe estar entre 01/01/1900 y 31/12/2026.';
+      errorFecha.style.display = 'inline';
+      fechaInput.setCustomValidity('Fecha inválida');
+    } else {
+      errorFecha.style.display = 'none';
+      fechaInput.setCustomValidity('');
+    }
+  });
+</script>
+
+ 	 <script src="app.js"></script>
+
+	<script>
+	document.getElementById("fechaJornada").valueAsDate = new Date();
+	</script>
+
+</body>
+
+</html>
+<!-- SE NECESITA LA AUTENTIFICACIÓN DE DOS PAROS PARA PODER INGRESAR DIRECTAMENTE AL FIREBASE - FIRESTOREDATABASE -->
